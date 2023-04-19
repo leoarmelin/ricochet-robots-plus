@@ -11,6 +11,19 @@
 		54D86BCC29EF701B009A1760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BCB29EF701B009A1760 /* ContentView.swift */; };
 		54D86BCE29EF701B009A1760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D86BCD29EF701B009A1760 /* Assets.xcassets */; };
 		54D86BD129EF701B009A1760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D86BD029EF701B009A1760 /* Preview Assets.xcassets */; };
+		54D86BDA29EF710A009A1760 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BD929EF710A009A1760 /* Boards.swift */; };
+		54D86BDD29EF7130009A1760 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BDC29EF7130009A1760 /* Tile.swift */; };
+		54D86BE029EF7155009A1760 /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BDF29EF7155009A1760 /* KeyCode.swift */; };
+		54D86BE229EF716C009A1760 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE129EF716C009A1760 /* Position.swift */; };
+		54D86BE429EF7180009A1760 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE329EF7180009A1760 /* Side.swift */; };
+		54D86BE629EF7198009A1760 /* EmptyTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE529EF7198009A1760 /* EmptyTile.swift */; };
+		54D86BE829EF71B3009A1760 /* InteractProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE729EF71B3009A1760 /* InteractProtocol.swift */; };
+		54D86BEA29EF71C6009A1760 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE929EF71C6009A1760 /* Player.swift */; };
+		54D86BEC29EF71DD009A1760 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BEB29EF71DD009A1760 /* Wall.swift */; };
+		54D86BEE29EF71F4009A1760 /* PartialWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BED29EF71F4009A1760 /* PartialWall.swift */; };
+		54D86BF129EF721F009A1760 /* KeyReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BF029EF721F009A1760 /* KeyReader.swift */; };
+		54D86BF329EF7236009A1760 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BF229EF7236009A1760 /* ViewExtensions.swift */; };
+		54D86BF629EF7262009A1760 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BF529EF7262009A1760 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +33,19 @@
 		54D86BCD29EF701B009A1760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54D86BD029EF701B009A1760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54D86BD229EF701B009A1760 /* RicochetRobotsPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RicochetRobotsPlus.entitlements; sourceTree = "<group>"; };
+		54D86BD929EF710A009A1760 /* Boards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boards.swift; sourceTree = "<group>"; };
+		54D86BDC29EF7130009A1760 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		54D86BDF29EF7155009A1760 /* KeyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCode.swift; sourceTree = "<group>"; };
+		54D86BE129EF716C009A1760 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		54D86BE329EF7180009A1760 /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
+		54D86BE529EF7198009A1760 /* EmptyTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTile.swift; sourceTree = "<group>"; };
+		54D86BE729EF71B3009A1760 /* InteractProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractProtocol.swift; sourceTree = "<group>"; };
+		54D86BE929EF71C6009A1760 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		54D86BEB29EF71DD009A1760 /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
+		54D86BED29EF71F4009A1760 /* PartialWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialWall.swift; sourceTree = "<group>"; };
+		54D86BF029EF721F009A1760 /* KeyReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyReader.swift; sourceTree = "<group>"; };
+		54D86BF229EF7236009A1760 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		54D86BF529EF7262009A1760 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +78,10 @@
 		54D86BC829EF701B009A1760 /* RicochetRobotsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				54D86BF429EF7255009A1760 /* ViewModels */,
+				54D86BEF29EF720D009A1760 /* Extensions */,
+				54D86BDB29EF7126009A1760 /* Models */,
+				54D86BD829EF70FD009A1760 /* Constants */,
 				54D86BC929EF701B009A1760 /* RicochetRobotsPlusApp.swift */,
 				54D86BCB29EF701B009A1760 /* ContentView.swift */,
 				54D86BCD29EF701B009A1760 /* Assets.xcassets */,
@@ -67,6 +97,55 @@
 				54D86BD029EF701B009A1760 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54D86BD829EF70FD009A1760 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				54D86BD929EF710A009A1760 /* Boards.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		54D86BDB29EF7126009A1760 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54D86BDE29EF7140009A1760 /* Actors */,
+				54D86BDF29EF7155009A1760 /* KeyCode.swift */,
+				54D86BE129EF716C009A1760 /* Position.swift */,
+				54D86BE329EF7180009A1760 /* Side.swift */,
+				54D86BE729EF71B3009A1760 /* InteractProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		54D86BDE29EF7140009A1760 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				54D86BDC29EF7130009A1760 /* Tile.swift */,
+				54D86BE529EF7198009A1760 /* EmptyTile.swift */,
+				54D86BE929EF71C6009A1760 /* Player.swift */,
+				54D86BEB29EF71DD009A1760 /* Wall.swift */,
+				54D86BED29EF71F4009A1760 /* PartialWall.swift */,
+			);
+			path = Actors;
+			sourceTree = "<group>";
+		};
+		54D86BEF29EF720D009A1760 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54D86BF029EF721F009A1760 /* KeyReader.swift */,
+				54D86BF229EF7236009A1760 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		54D86BF429EF7255009A1760 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				54D86BF529EF7262009A1760 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +218,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D86BE029EF7155009A1760 /* KeyCode.swift in Sources */,
+				54D86BEE29EF71F4009A1760 /* PartialWall.swift in Sources */,
 				54D86BCC29EF701B009A1760 /* ContentView.swift in Sources */,
+				54D86BE229EF716C009A1760 /* Position.swift in Sources */,
+				54D86BEC29EF71DD009A1760 /* Wall.swift in Sources */,
+				54D86BF629EF7262009A1760 /* MainViewModel.swift in Sources */,
 				54D86BCA29EF701B009A1760 /* RicochetRobotsPlusApp.swift in Sources */,
+				54D86BE429EF7180009A1760 /* Side.swift in Sources */,
+				54D86BF129EF721F009A1760 /* KeyReader.swift in Sources */,
+				54D86BF329EF7236009A1760 /* ViewExtensions.swift in Sources */,
+				54D86BDA29EF710A009A1760 /* Boards.swift in Sources */,
+				54D86BDD29EF7130009A1760 /* Tile.swift in Sources */,
+				54D86BE629EF7198009A1760 /* EmptyTile.swift in Sources */,
+				54D86BEA29EF71C6009A1760 /* Player.swift in Sources */,
+				54D86BE829EF71B3009A1760 /* InteractProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
