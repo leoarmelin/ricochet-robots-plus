@@ -13,6 +13,11 @@ class MainViewModel: ObservableObject {
     let boardSize: Int
     private var playerSelect = 0
     
+    private let boardFilterUseCase = BoardFilterUseCase()
+    private let getBoardTileUseCase = GetBoardTileUseCase()
+    private let updateBoardUseCase = UpdateBoardUseCase()
+    private let getFirstBlockingTileUseCase = GetFirstBlockingTileUseCase()
+    
     init() {
         self.board = Boards.boardOne
         self.boardSize = Int(Double(Boards.boardOne.count).squareRoot())
@@ -22,45 +27,13 @@ class MainViewModel: ObservableObject {
         playerList.append(Player(color: .green, position: getInitialPosition()))
         playerList.append(Player(color: .blue, position: getInitialPosition()))
         
-        updateBoardPlayer(for: playerList[0].position, player: playerList[0])
-        updateBoardPlayer(for: playerList[1].position, player: playerList[1])
-        updateBoardPlayer(for: playerList[2].position, player: playerList[2])
+        updateBoardUseCase.update(&board, with: playerList[0].position, using: playerList[0])
+        updateBoardUseCase.update(&board, with: playerList[1].position, using: playerList[1])
+        updateBoardUseCase.update(&board, with: playerList[2].position, using: playerList[2])
     }
     
     func getTileFromPosition(_ position: Position) -> any Tile {
-        return board.first { tile in tile.position == position }!
-    }
-    
-    private func updateBoardPlayer(for position: Position, player: Player?) {
-        guard
-            let index = board.firstIndex(where: { tile in tile.position == position })
-        else { return }
-        
-        if let previousIndex = board.firstIndex(where: { tile in tile.position == player?.position }) {
-            switch board[previousIndex] {
-            case var emptyTile as EmptyTile:
-                emptyTile.player = nil
-                board[previousIndex] = emptyTile
-            case var partialWall as PartialWall:
-                partialWall.player = nil
-                board[previousIndex] = partialWall
-                
-            default:
-                break
-            }
-        }
-        
-        switch board[index] {
-        case var emptyTile as EmptyTile:
-            emptyTile.player = player
-            board[index] = emptyTile
-        case var partialWall as PartialWall:
-            partialWall.player = player
-            board[index] = partialWall
-            
-        default:
-            break
-        }
+        return getBoardTileUseCase.getTile(for: board, on: position)
     }
     
     func onKeyPress(_ key: KeyCode) {
@@ -68,41 +41,14 @@ class MainViewModel: ObservableObject {
             let newPosition = getNewPosition(for: playerList[playerSelect], key: key).first
         else { return }
 
-        updateBoardPlayer(for: newPosition, player: playerList[playerSelect])
+        updateBoardUseCase.update(&board, with: newPosition, using: playerList[playerSelect])
         playerList[playerSelect].position = newPosition
     }
     
     private func getNewPosition(for player: Player, key: KeyCode) -> [Position] {
-        let filteredList = filterListBy(key: key, player: player)
-        var firstBlockerTile: Tile? = nil
+        let filteredList = boardFilterUseCase.filterList(for: board, with: key, using: player)
         
-        for tile in filteredList {
-            if firstBlockerTile != nil {
-                continue
-            }
-            switch tile {
-            case is Wall:
-                firstBlockerTile = tile
-                break
-            case let castedTile as PartialWall:
-                if (castedTile.player != nil && castedTile.player?.id != player.id) || castedTile.isBlockingMovement(for: key, player.position) {
-                    firstBlockerTile = tile
-                    break
-                }
-            case let emptyTile as EmptyTile:
-                if emptyTile.player != nil && emptyTile.player?.id != player.id {
-                    firstBlockerTile = tile
-                    break
-                }
-
-            default:
-                continue
-            }
-        }
-        
-        if firstBlockerTile == nil {
-            firstBlockerTile = filteredList.last
-        }
+        let firstBlockerTile = getFirstBlockingTileUseCase.getFirstBlockingTile(for: filteredList, with: key, using: player)
         
         switch firstBlockerTile {
         case let wall as Wall:
@@ -133,29 +79,5 @@ class MainViewModel: ObservableObject {
         else { return }
         
         self.playerSelect = index
-    }
-    
-    func filterListBy(key: KeyCode, player: Player) -> [Tile] {
-        var filteredList: [Tile]
-
-        switch key {
-        case .arrowUp:
-            filteredList = board.filter { tile in tile.position.x == player.position.x && tile.position.y <= player.position.y }
-            filteredList.sort { $0.position.y > $1.position.y }
-            
-        case .arrowDown:
-            filteredList = board.filter { tile in tile.position.x == player.position.x && tile.position.y >= player.position.y }
-            filteredList.sort { $0.position.y < $1.position.y }
-            
-        case .arrowLeft:
-            filteredList = board.filter { tile in tile.position.x <= player.position.x && tile.position.y == player.position.y }
-            filteredList.sort { $0.position.x > $1.position.x }
-            
-        case .arrowRight:
-            filteredList = board.filter { tile in tile.position.x >= player.position.x && tile.position.y == player.position.y }
-            filteredList.sort { $0.position.x < $1.position.x }
-        }
-        
-        return filteredList
     }
 }

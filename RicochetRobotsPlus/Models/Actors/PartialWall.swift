@@ -11,10 +11,10 @@ struct PartialWall: Tile, InteractProtocol {
     let color: Color = .black
     var position: Position
     let sidesBlock: [Side]
-    var player: Player? = nil
+    var playerId: UUID? = nil
     
     func onInteract(with key: KeyCode) -> [Position] {
-        if player != nil {
+        if playerId != nil {
             return interactAsWall(with: key)
         }
         
@@ -68,3 +68,8 @@ struct PartialWall: Tile, InteractProtocol {
     }
 }
 
+extension PartialWall {
+    static func == (lhs: PartialWall, rhs: PartialWall) -> Bool {
+        lhs.position == rhs.position
+    }
+}

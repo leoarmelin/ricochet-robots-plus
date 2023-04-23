@@ -6,7 +6,7 @@
 //
 
 struct Boards {
-    static let boardOne: [Tile] = [
+    static let boardOne: [any Tile] = [
         EmptyTile(position: .init(x: 0, y: 0)),
         PartialWall(position: .init(x: 1, y: 0), sidesBlock: [.right]),
         EmptyTile(position: .init(x: 2, y: 0)),

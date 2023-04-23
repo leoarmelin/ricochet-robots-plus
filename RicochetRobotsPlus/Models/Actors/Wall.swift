@@ -15,3 +15,9 @@ struct Wall: Tile, InteractProtocol {
         interactAsWall(with: key)
     }
 }
+
+extension Wall {
+    static func == (lhs: Wall, rhs: Wall) -> Bool {
+        lhs.position == rhs.position
+    }
+}

@@ -10,12 +10,18 @@ import SwiftUI
 struct EmptyTile: Tile, InteractProtocol {
     var color: Color = .black
     var position: Position
-    var player: Player? = nil
+    var playerId: UUID? = nil
     
     func onInteract(with key: KeyCode) -> [Position] {
-        if player != nil {
+        if playerId != nil {
             return interactAsWall(with: key)
         }
         return [self.position]
+    }
+}
+
+extension EmptyTile {
+    static func == (lhs: EmptyTile, rhs: EmptyTile) -> Bool {
+        lhs.position == rhs.position
     }
 }

@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542AF58329F4628C00401EFF /* GetBoardTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58229F4628C00401EFF /* GetBoardTileUseCase.swift */; };
+		542AF58529F4632500401EFF /* GetBoardTileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58429F4632500401EFF /* GetBoardTileTests.swift */; };
+		542AF58629F4632900401EFF /* GetBoardTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58229F4628C00401EFF /* GetBoardTileUseCase.swift */; };
+		542AF58829F4666D00401EFF /* UpdateBoardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58729F4666D00401EFF /* UpdateBoardUseCase.swift */; };
+		542AF58A29F469D600401EFF /* UpdateBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58929F469D600401EFF /* UpdateBoardTests.swift */; };
+		542AF58B29F469F100401EFF /* UpdateBoardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AF58729F4666D00401EFF /* UpdateBoardUseCase.swift */; };
+		544C914429F44EE20026D4B1 /* BoardFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C914329F44EE20026D4B1 /* BoardFilterTests.swift */; };
+		544C914A29F452050026D4B1 /* BoardFilterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */; };
+		544C914B29F452820026D4B1 /* Boards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BD929EF710A009A1760 /* Boards.swift */; };
+		544C914C29F452A30026D4B1 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BDC29EF7130009A1760 /* Tile.swift */; };
+		544C914D29F452A50026D4B1 /* EmptyTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE529EF7198009A1760 /* EmptyTile.swift */; };
+		544C914E29F452A90026D4B1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE929EF71C6009A1760 /* Player.swift */; };
+		544C914F29F452AB0026D4B1 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BEB29EF71DD009A1760 /* Wall.swift */; };
+		544C915029F452AE0026D4B1 /* PartialWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BED29EF71F4009A1760 /* PartialWall.swift */; };
+		544C915129F452B00026D4B1 /* KeyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BDF29EF7155009A1760 /* KeyCode.swift */; };
+		544C915229F452B30026D4B1 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE129EF716C009A1760 /* Position.swift */; };
+		544C915329F452B60026D4B1 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE329EF7180009A1760 /* Side.swift */; };
+		544C915429F452B80026D4B1 /* InteractProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BE729EF71B3009A1760 /* InteractProtocol.swift */; };
+		545948DD29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */; };
+		545948DF29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DE29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift */; };
+		545948E029F59D8A002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */; };
+		54BD215329F44918001F0BBB /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD215229F44918001F0BBB /* TileView.swift */; };
+		54BD215629F44A8C001F0BBB /* BoardFilterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */; };
 		54D86BCA29EF701B009A1760 /* RicochetRobotsPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BC929EF701B009A1760 /* RicochetRobotsPlusApp.swift */; };
 		54D86BCC29EF701B009A1760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BCB29EF701B009A1760 /* ContentView.swift */; };
 		54D86BCE29EF701B009A1760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D86BCD29EF701B009A1760 /* Assets.xcassets */; };
@@ -26,7 +49,27 @@
 		54D86BF629EF7262009A1760 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BF529EF7262009A1760 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		544C914529F44EE20026D4B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54D86BBE29EF701B009A1760 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54D86BC529EF701B009A1760;
+			remoteInfo = RicochetRobotsPlus;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		542AF58229F4628C00401EFF /* GetBoardTileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBoardTileUseCase.swift; sourceTree = "<group>"; };
+		542AF58429F4632500401EFF /* GetBoardTileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBoardTileTests.swift; sourceTree = "<group>"; };
+		542AF58729F4666D00401EFF /* UpdateBoardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBoardUseCase.swift; sourceTree = "<group>"; };
+		542AF58929F469D600401EFF /* UpdateBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBoardTests.swift; sourceTree = "<group>"; };
+		544C914129F44EE20026D4B1 /* RicochetRobotsPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RicochetRobotsPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		544C914329F44EE20026D4B1 /* BoardFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFilterTests.swift; sourceTree = "<group>"; };
+		545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirstBlockingTileUseCase.swift; sourceTree = "<group>"; };
+		545948DE29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirstBlockingTileTests.swift; sourceTree = "<group>"; };
+		54BD215229F44918001F0BBB /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFilterUseCase.swift; sourceTree = "<group>"; };
 		54D86BC629EF701B009A1760 /* RicochetRobotsPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicochetRobotsPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D86BC929EF701B009A1760 /* RicochetRobotsPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicochetRobotsPlusApp.swift; sourceTree = "<group>"; };
 		54D86BCB29EF701B009A1760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		544C913E29F44EE20026D4B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54D86BC329EF701B009A1760 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +109,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		544C914229F44EE20026D4B1 /* RicochetRobotsPlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				544C914329F44EE20026D4B1 /* BoardFilterTests.swift */,
+				542AF58429F4632500401EFF /* GetBoardTileTests.swift */,
+				542AF58929F469D600401EFF /* UpdateBoardTests.swift */,
+				545948DE29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift */,
+			);
+			path = RicochetRobotsPlusTests;
+			sourceTree = "<group>";
+		};
+		54BD215129F44909001F0BBB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				54BD215229F44918001F0BBB /* TileView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		54BD215429F44A30001F0BBB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */,
+				542AF58229F4628C00401EFF /* GetBoardTileUseCase.swift */,
+				542AF58729F4666D00401EFF /* UpdateBoardUseCase.swift */,
+				545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		54D86BBD29EF701B009A1760 = {
 			isa = PBXGroup;
 			children = (
 				54D86BC829EF701B009A1760 /* RicochetRobotsPlus */,
+				544C914229F44EE20026D4B1 /* RicochetRobotsPlusTests */,
 				54D86BC729EF701B009A1760 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				54D86BC629EF701B009A1760 /* RicochetRobotsPlus.app */,
+				544C914129F44EE20026D4B1 /* RicochetRobotsPlusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +160,8 @@
 		54D86BC829EF701B009A1760 /* RicochetRobotsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				54BD215429F44A30001F0BBB /* UseCases */,
+				54BD215129F44909001F0BBB /* Components */,
 				54D86BF429EF7255009A1760 /* ViewModels */,
 				54D86BEF29EF720D009A1760 /* Extensions */,
 				54D86BDB29EF7126009A1760 /* Models */,
@@ -151,6 +235,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		544C914029F44EE20026D4B1 /* RicochetRobotsPlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 544C914929F44EE20026D4B1 /* Build configuration list for PBXNativeTarget "RicochetRobotsPlusTests" */;
+			buildPhases = (
+				544C913D29F44EE20026D4B1 /* Sources */,
+				544C913E29F44EE20026D4B1 /* Frameworks */,
+				544C913F29F44EE20026D4B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				544C914629F44EE20026D4B1 /* PBXTargetDependency */,
+			);
+			name = RicochetRobotsPlusTests;
+			productName = RicochetRobotsPlusTests;
+			productReference = 544C914129F44EE20026D4B1 /* RicochetRobotsPlusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		54D86BC529EF701B009A1760 /* RicochetRobotsPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54D86BD529EF701B009A1760 /* Build configuration list for PBXNativeTarget "RicochetRobotsPlus" */;
@@ -178,6 +280,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					544C914029F44EE20026D4B1 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 54D86BC529EF701B009A1760;
+					};
 					54D86BC529EF701B009A1760 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -197,11 +303,19 @@
 			projectRoot = "";
 			targets = (
 				54D86BC529EF701B009A1760 /* RicochetRobotsPlus */,
+				544C914029F44EE20026D4B1 /* RicochetRobotsPlusTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		544C913F29F44EE20026D4B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54D86BC429EF701B009A1760 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,12 +328,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		544C913D29F44EE20026D4B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545948DF29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift in Sources */,
+				544C914D29F452A50026D4B1 /* EmptyTile.swift in Sources */,
+				544C915029F452AE0026D4B1 /* PartialWall.swift in Sources */,
+				544C914A29F452050026D4B1 /* BoardFilterUseCase.swift in Sources */,
+				544C914F29F452AB0026D4B1 /* Wall.swift in Sources */,
+				544C914429F44EE20026D4B1 /* BoardFilterTests.swift in Sources */,
+				542AF58529F4632500401EFF /* GetBoardTileTests.swift in Sources */,
+				544C915429F452B80026D4B1 /* InteractProtocol.swift in Sources */,
+				542AF58B29F469F100401EFF /* UpdateBoardUseCase.swift in Sources */,
+				544C915329F452B60026D4B1 /* Side.swift in Sources */,
+				542AF58A29F469D600401EFF /* UpdateBoardTests.swift in Sources */,
+				544C914B29F452820026D4B1 /* Boards.swift in Sources */,
+				544C914E29F452A90026D4B1 /* Player.swift in Sources */,
+				544C915129F452B00026D4B1 /* KeyCode.swift in Sources */,
+				542AF58629F4632900401EFF /* GetBoardTileUseCase.swift in Sources */,
+				544C915229F452B30026D4B1 /* Position.swift in Sources */,
+				545948E029F59D8A002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */,
+				544C914C29F452A30026D4B1 /* Tile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54D86BC229EF701B009A1760 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545948DD29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */,
 				54D86BE029EF7155009A1760 /* KeyCode.swift in Sources */,
+				54BD215629F44A8C001F0BBB /* BoardFilterUseCase.swift in Sources */,
 				54D86BEE29EF71F4009A1760 /* PartialWall.swift in Sources */,
+				54BD215329F44918001F0BBB /* TileView.swift in Sources */,
 				54D86BCC29EF701B009A1760 /* ContentView.swift in Sources */,
 				54D86BE229EF716C009A1760 /* Position.swift in Sources */,
 				54D86BEC29EF71DD009A1760 /* Wall.swift in Sources */,
@@ -227,18 +369,62 @@
 				54D86BCA29EF701B009A1760 /* RicochetRobotsPlusApp.swift in Sources */,
 				54D86BE429EF7180009A1760 /* Side.swift in Sources */,
 				54D86BF129EF721F009A1760 /* KeyReader.swift in Sources */,
+				542AF58329F4628C00401EFF /* GetBoardTileUseCase.swift in Sources */,
 				54D86BF329EF7236009A1760 /* ViewExtensions.swift in Sources */,
 				54D86BDA29EF710A009A1760 /* Boards.swift in Sources */,
 				54D86BDD29EF7130009A1760 /* Tile.swift in Sources */,
 				54D86BE629EF7198009A1760 /* EmptyTile.swift in Sources */,
 				54D86BEA29EF71C6009A1760 /* Player.swift in Sources */,
 				54D86BE829EF71B3009A1760 /* InteractProtocol.swift in Sources */,
+				542AF58829F4666D00401EFF /* UpdateBoardUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		544C914629F44EE20026D4B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54D86BC529EF701B009A1760 /* RicochetRobotsPlus */;
+			targetProxy = 544C914529F44EE20026D4B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		544C914729F44EE20026D4B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JAKAGDSG69;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoarmelin.RicochetRobotsPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicochetRobotsPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RicochetRobotsPlus";
+			};
+			name = Debug;
+		};
+		544C914829F44EE20026D4B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JAKAGDSG69;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoarmelin.RicochetRobotsPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RicochetRobotsPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RicochetRobotsPlus";
+			};
+			name = Release;
+		};
 		54D86BD329EF701B009A1760 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -409,6 +595,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		544C914929F44EE20026D4B1 /* Build configuration list for PBXNativeTarget "RicochetRobotsPlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544C914729F44EE20026D4B1 /* Debug */,
+				544C914829F44EE20026D4B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		54D86BC129EF701B009A1760 /* Build configuration list for PBXProject "RicochetRobotsPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
