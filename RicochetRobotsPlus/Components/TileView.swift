@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct TileView: View {
+    
     let tile: any Tile
     let size: CGFloat = 30
     
     var partialWall: PartialWall? {
         tile as? PartialWall
+    }
+    
+    var trampoline: Trampoline? {
+        tile as? Trampoline
     }
     
     var body: some View {
@@ -29,6 +34,15 @@ struct TileView: View {
             }
             .applyIf(partialWall?.sidesBlock.contains(.right) == true) {
                 $0.overlay(Rectangle().fill(.gray).frame(width: 4, height: 30), alignment: .trailing)
+            }
+            .applyIf(trampoline?.direction == .topLeft_bottomRight) {
+                $0.overlay(
+                    Rectangle()
+                        .fill(.cyan)
+                        .rotationEffect(.degrees(135.0))
+                        .frame(width: 4, height: 30),
+                    alignment: .center
+                )
             }
             .frame(width: size, height: size)
     }

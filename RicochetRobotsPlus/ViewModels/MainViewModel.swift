@@ -37,17 +37,20 @@ class MainViewModel: ObservableObject {
     }
     
     func onKeyPress(_ key: KeyCode) {
-        guard
-            let newPosition = getNewPosition(for: playerList[playerSelect], key: key).first
-        else { return }
-
-        updateBoardUseCase.update(&board, with: newPosition, using: playerList[playerSelect])
-        playerList[playerSelect].position = newPosition
+        let filteredList = boardFilterUseCase.filterList(for: board, with: key, using: playerList[playerSelect])
+        
+        let positionList = getNewPosition(for: filteredList, with: key, using: playerList[playerSelect], board: board)
+        
+        for i in 0..<positionList.count {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 * Double(i)) { [self] in
+                updateBoardUseCase.update(&board, with: positionList[i], using: playerList[playerSelect])
+                playerList[playerSelect].position = positionList[i]
+            }
+        }
     }
     
-    private func getNewPosition(for player: Player, key: KeyCode) -> [Position] {
-        let filteredList = boardFilterUseCase.filterList(for: board, with: key, using: player)
-        
+    private func getNewPosition(for filteredList: [any Tile], with key: KeyCode, using player: Player, board: [any Tile]) -> [Position] {
+        var pivotBoard = board
         let firstBlockerTile = getFirstBlockingTileUseCase.getFirstBlockingTile(for: filteredList, with: key, using: player)
         
         switch firstBlockerTile {
@@ -57,6 +60,22 @@ class MainViewModel: ObservableObject {
             return partialWall.onInteract(with: key)
         case let emptyTile as EmptyTile:
             return emptyTile.onInteract(with: key)
+        case let trampoline as Trampoline:
+            let newDirection = trampoline.ricochetFrom(key)
+            var filteredListFromTrampoline = boardFilterUseCase.filterList(
+                for: pivotBoard,
+                with: newDirection,
+                using: trampoline.position
+            )
+            let positionToTrampoline = trampoline.onInteract(with: key)
+            
+            updateBoardUseCase.update(&filteredListFromTrampoline, with: trampoline.position, using: player)
+            updateBoardUseCase.update(&pivotBoard, with: trampoline.position, using: playerList[playerSelect])
+            playerList[playerSelect].position = trampoline.position
+
+            let positionFromTrampoline = getNewPosition(for: filteredListFromTrampoline, with: newDirection, using: playerList[playerSelect], board: pivotBoard)
+            
+            return positionToTrampoline + positionFromTrampoline
         default:
             if let lastItem = filteredList.last {
                 return [lastItem.position]

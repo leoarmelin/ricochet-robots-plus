@@ -28,6 +28,8 @@
 		545948DD29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */; };
 		545948DF29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DE29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift */; };
 		545948E029F59D8A002DBEE9 /* GetFirstBlockingTileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */; };
+		545948E229F5A480002DBEE9 /* Trampoline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948E129F5A480002DBEE9 /* Trampoline.swift */; };
+		545948E429F5A5E7002DBEE9 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545948E329F5A5E7002DBEE9 /* Direction.swift */; };
 		54BD215329F44918001F0BBB /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD215229F44918001F0BBB /* TileView.swift */; };
 		54BD215629F44A8C001F0BBB /* BoardFilterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */; };
 		54D86BCA29EF701B009A1760 /* RicochetRobotsPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D86BC929EF701B009A1760 /* RicochetRobotsPlusApp.swift */; };
@@ -68,6 +70,8 @@
 		544C914329F44EE20026D4B1 /* BoardFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFilterTests.swift; sourceTree = "<group>"; };
 		545948DC29F59C4C002DBEE9 /* GetFirstBlockingTileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirstBlockingTileUseCase.swift; sourceTree = "<group>"; };
 		545948DE29F59D82002DBEE9 /* GetFirstBlockingTileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirstBlockingTileTests.swift; sourceTree = "<group>"; };
+		545948E129F5A480002DBEE9 /* Trampoline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trampoline.swift; sourceTree = "<group>"; };
+		545948E329F5A5E7002DBEE9 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		54BD215229F44918001F0BBB /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		54BD215529F44A8C001F0BBB /* BoardFilterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFilterUseCase.swift; sourceTree = "<group>"; };
 		54D86BC629EF701B009A1760 /* RicochetRobotsPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RicochetRobotsPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,7 @@
 				54D86BE129EF716C009A1760 /* Position.swift */,
 				54D86BE329EF7180009A1760 /* Side.swift */,
 				54D86BE729EF71B3009A1760 /* InteractProtocol.swift */,
+				545948E329F5A5E7002DBEE9 /* Direction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				54D86BE929EF71C6009A1760 /* Player.swift */,
 				54D86BEB29EF71DD009A1760 /* Wall.swift */,
 				54D86BED29EF71F4009A1760 /* PartialWall.swift */,
+				545948E129F5A480002DBEE9 /* Trampoline.swift */,
 			);
 			path = Actors;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				54D86BEE29EF71F4009A1760 /* PartialWall.swift in Sources */,
 				54BD215329F44918001F0BBB /* TileView.swift in Sources */,
 				54D86BCC29EF701B009A1760 /* ContentView.swift in Sources */,
+				545948E229F5A480002DBEE9 /* Trampoline.swift in Sources */,
 				54D86BE229EF716C009A1760 /* Position.swift in Sources */,
 				54D86BEC29EF71DD009A1760 /* Wall.swift in Sources */,
 				54D86BF629EF7262009A1760 /* MainViewModel.swift in Sources */,
@@ -373,6 +380,7 @@
 				54D86BF329EF7236009A1760 /* ViewExtensions.swift in Sources */,
 				54D86BDA29EF710A009A1760 /* Boards.swift in Sources */,
 				54D86BDD29EF7130009A1760 /* Tile.swift in Sources */,
+				545948E429F5A5E7002DBEE9 /* Direction.swift in Sources */,
 				54D86BE629EF7198009A1760 /* EmptyTile.swift in Sources */,
 				54D86BEA29EF71C6009A1760 /* Player.swift in Sources */,
 				54D86BE829EF71B3009A1760 /* InteractProtocol.swift in Sources */,

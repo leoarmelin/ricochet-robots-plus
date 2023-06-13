@@ -11,12 +11,17 @@ struct GetFirstBlockingTileUseCase {
             switch tile {
             case is Wall:
                 return tile
-            case let castedTile as PartialWall:
-                if (castedTile.playerId != nil && castedTile.playerId != player.id) || castedTile.isBlockingMovement(for: key, player.position) {
+            case let partialWall as PartialWall:
+                if (partialWall.playerId != nil && partialWall.playerId != player.id) || partialWall.isBlockingMovement(for: key, player.position) {
                     return tile
                 }
             case let emptyTile as EmptyTile:
                 if emptyTile.playerId != nil && emptyTile.playerId != player.id {
+                    return tile
+                }
+                
+            case let trampoline as Trampoline:
+                if (trampoline.playerId != player.id) {
                     return tile
                 }
 

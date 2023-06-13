@@ -54,6 +54,15 @@ final class GetFirstBlockingTileTests: XCTestCase {
         XCTAssertTrue(tile?.isEqual(to: board[119]) == true)
     }
     
+    func test_trampoline() throws {
+        let key: KeyCode = .arrowDown
+        let player: Player = .init(color: .blue, position: .init(x: 7, y: 0))
+        let filteredBoard = boardFilterUseCase.filterList(for: board, with: key, using: player)
+        let tile = getFirstBlockingTileUseCase.getFirstBlockingTile(for: filteredBoard, with: key, using: player)
+        
+        XCTAssertTrue(tile?.isEqual(to: board[119]) == true)
+    }
+    
     func test_nothing() throws {
         let key: KeyCode = .arrowDown
         let player: Player = .init(color: .blue, position: .init(x: 5, y: 0))

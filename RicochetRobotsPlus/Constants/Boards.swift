@@ -47,7 +47,7 @@ struct Boards {
         EmptyTile(position: .init(x: 3, y: 2)),
         PartialWall(position: .init(x: 4, y: 2), sidesBlock: [.top, .left]),
         EmptyTile(position: .init(x: 5, y: 2)),
-        EmptyTile(position: .init(x: 6, y: 2)),
+        Trampoline(position: .init(x: 6, y: 2), direction: .topLeft_bottomRight),
         EmptyTile(position: .init(x: 7, y: 2)),
         EmptyTile(position: .init(x: 8, y: 2)),
         EmptyTile(position: .init(x: 9, y: 2)),
