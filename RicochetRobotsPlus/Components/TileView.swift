@@ -35,11 +35,11 @@ struct TileView: View {
             .applyIf(partialWall?.sidesBlock.contains(.right) == true) {
                 $0.overlay(Rectangle().fill(.gray).frame(width: 4, height: 30), alignment: .trailing)
             }
-            .applyIf(trampoline?.direction == .topLeft_bottomRight) {
+            .applyIf(trampoline != nil) {
                 $0.overlay(
                     Rectangle()
                         .fill(.cyan)
-                        .rotationEffect(.degrees(135.0))
+                        .rotationEffect(.degrees(trampoline?.direction == .topLeft_bottomRight ? 135.0 : 45.0))
                         .frame(width: 4, height: 30),
                     alignment: .center
                 )

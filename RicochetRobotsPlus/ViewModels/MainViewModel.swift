@@ -19,8 +19,8 @@ class MainViewModel: ObservableObject {
     private let getFirstBlockingTileUseCase = GetFirstBlockingTileUseCase()
     
     init() {
-        self.board = Boards.boardOne
-        self.boardSize = Int(Double(Boards.boardOne.count).squareRoot())
+        self.board = Boards.boardTwo
+        self.boardSize = Int(Double(Boards.boardTwo.count).squareRoot())
         
         self.playerList = []
         playerList.append(Player(color: .purple, position: getInitialPosition()))
