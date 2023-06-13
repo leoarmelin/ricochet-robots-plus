@@ -55,11 +55,11 @@ class MainViewModel: ObservableObject {
         
         switch firstBlockerTile {
         case let wall as Wall:
-            return wall.onInteract(with: key)
+            return wall.onInteract(with: key, for: player)
         case let partialWall as PartialWall:
-            return partialWall.onInteract(with: key)
+            return partialWall.onInteract(with: key, for: player)
         case let emptyTile as EmptyTile:
-            return emptyTile.onInteract(with: key)
+            return emptyTile.onInteract(with: key, for: player)
         case let trampoline as Trampoline:
             let newDirection = trampoline.ricochetFrom(key)
             var filteredListFromTrampoline = boardFilterUseCase.filterList(
@@ -67,7 +67,7 @@ class MainViewModel: ObservableObject {
                 with: newDirection,
                 using: trampoline.position
             )
-            let positionToTrampoline = trampoline.onInteract(with: key)
+            let positionToTrampoline = trampoline.onInteract(with: key, for: player)
             
             updateBoardUseCase.update(&filteredListFromTrampoline, with: trampoline.position, using: player)
             updateBoardUseCase.update(&pivotBoard, with: trampoline.position, using: playerList[playerSelect])

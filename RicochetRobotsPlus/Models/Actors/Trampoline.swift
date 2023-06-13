@@ -40,8 +40,8 @@ struct Trampoline: Tile, InteractProtocol {
         }
     }
     
-    func onInteract(with key: KeyCode) -> [Position] {
-        if playerId != nil {
+    func onInteract(with key: KeyCode, for player: Player) -> [Position] {
+        if playerId != nil && playerId != player.id {
             return interactAsWall(with: key)
         }
         return [self.position]

@@ -6,5 +6,5 @@
 //
 
 protocol InteractProtocol {
-    func onInteract(with key: KeyCode) -> [Position]
+    func onInteract(with key: KeyCode, for player: Player) -> [Position]
 }

@@ -13,8 +13,8 @@ struct PartialWall: Tile, InteractProtocol {
     let sidesBlock: [Side]
     var playerId: UUID? = nil
     
-    func onInteract(with key: KeyCode) -> [Position] {
-        if playerId != nil {
+    func onInteract(with key: KeyCode, for player: Player) -> [Position] {
+        if playerId != nil && playerId != player.id {
             return interactAsWall(with: key)
         }
         

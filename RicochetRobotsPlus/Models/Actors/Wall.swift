@@ -11,7 +11,7 @@ struct Wall: Tile, InteractProtocol {
     let color: Color = .red
     var position: Position
     
-    func onInteract(with key: KeyCode) -> [Position] {
+    func onInteract(with key: KeyCode, for player: Player) -> [Position] {
         interactAsWall(with: key)
     }
 }
